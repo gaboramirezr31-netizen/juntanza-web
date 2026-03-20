@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juntanza • Cookie Lab • Catering & Galletas Artesanales</title>
+    <style>
+        /* --- ESTILOS CSS GENERALES (BASADOS EN EL FLYER) --- */
+        :root {
+            --color-primary-brown: #6E4F39; /* Café chocolate profundo del texto */
+            --color-secondary-brown: #A8866B; /* Marrón cálido del logo */
+            --color-bg-light: #F6F2EA; /* Beige claro de fondo */
+            --color-accent-blue: #A0C0C8; /* Azul pastel de los detalles */
+            --color-accent-pink: #EFC9D1; /* Rosa pastel de Juntanza */
+            --font-family-headings: 'Georgia', serif; /* O una fuente serif elegante */
+            --font-family-body: 'Arial', sans-serif; /* Limpia para lectura */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family-body);
+            background-color: var(--color-bg-light);
+            color: var(--color-primary-brown);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-family-headings);
+            color: var(--color-primary-brown);
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        /* --- LAYOUT Y CONTENEDORES --- */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: white;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--color-secondary-brown);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo small {
+            font-size: 0.8rem;
+            color: var(--color-secondary-brown);
+            margin-top: -5px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-secondary-brown);
+        }
+
+        /* --- SECCIÓN HERO --- */
+        .hero {
+            background-color: var(--color-secondary-brown);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background-color: var(--color-accent-blue);
+            color: var(--color-primary-brown);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #B2CFD7; /* Un azul ligeramente más claro al hover */
+        }
+
+        /* --- SECCIÓN SERVICIOS (CATERING) --- */
+        .catering {
+            padding: 60px 0;
+        }
+
+        /* --- SECCIÓN PRODUCTO (COOKIE LAB) --- */
+        .cookie-lab {
+            background-color: var(--color-accent-blue);
+            color: var(--color-primary-brown);
+            padding: 60px 0;
+        }
+
+        .cookie-lab h2 {
+            color: var(--color-primary-brown);
+        }
+
+        .cookie-details {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookie-details p.description {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .cookie-details ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        /* --- SECCIÓN CONTACTO Y FOOTER --- */
+        footer {
+            background-color: var(--color-primary-brown);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-link {
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVO --- */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#hero">Juntanza</a>
+                <small>By Cookie Lab • Andes</small>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#catering">Catering</a></li>
+                    <li><a href="#cookie-lab">Cookie Lab</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Momentos que se comparten, sabores que se quedan.</h1>
+            <p>Servicio de Catering profesional y el hogar de las famosas **Cookie Lab**.</p>
+            <a href="#contacto" class="cta-button">Pide tu Presupuesto o Galletas</a>
+        </div>
+    </section>
+
+    <section id="catering" class="catering">
+        <div class="container">
+            <h2>Tu evento en nuestras manos</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Personalizamos el menú para tus celebraciones más importantes: bodas, eventos corporativos, cumpleaños y reuniones familiares. Cada plato es diseñado con amor y profesionalismo.</p>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 40px; gap: 20px;">
+                <div style="flex: 1; min-width: 250px; text-align: center; border: 1px solid var(--color-accent-blue); padding: 20px; border-radius: 5px;">
+                    <h3>Coffee Breaks</h3>
+                    <p>Ideales para reuniones empresariales productivas.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center; border: 1px solid var(--color-accent-blue); padding: 20px; border-radius: 5px;">
+                    <h3>Desayunos Especiales</h3>
+                    <p>Empieza el día con un toque gourmet inolvidable.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center; border: 1px solid var(--color-accent-blue); padding: 20px; border-radius: 5px;">
+                    <h3>Cenas Gourmet</h3>
+                    <p>Sofisticación y sabor en cada bocado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cookie-lab" class="cookie-lab">
+        <div class="container">
+            <h2>Cookie Lab: El Corazón de Juntanza</h2>
+            <div class="cookie-details">
+                <p class="description">"Mucho más que una galleta. Es ciencia, chocolate y amor."</p>
+                <p>Nuestras <strong>Galletas de Chocolate son 100% artesanales</strong>: Crujientes por fuera, suaves por dentro, con un sabor irresistible.</p>
+                
+                <h3 style="color: var(--color-primary-brown); margin-top: 40px;">Llévatelas a casa:</h3>
+                <ul>
+                    <li>Caja x4</li>
+                    <li>Caja x10</li>
+                    <li>Caja x20</li>
+                </ul>
+                <p style="font-size: 0.9rem; margin-top: 20px;">Ideal para compartir o para ese antojo especial.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h3>Contáctanos</h3>
+            <p>Encuéntranos en Andes, Antioquia. Estamos listos para servirte.</p>
+            
+            <div class="contact-links">
+                <a href="https://www.instagram.com/juntanza.andes/" target="_blank" class="contact-link">
+                    <span>📷 Instagram @juntanza.andes</span>
+                </td>
+                
+                <a href="tel:+573127537460" class="contact-link">
+                    <span>📞 Llámanos: 312 753 74 60</span>
+                </a>
+                <a href="tel:+573135440728" class="contact-link">
+                    <span>📞 Llámanos: 313 544 07 28</span>
+                </a>
+            </div>
+            
+            <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.8;">&copy; 2026 Juntanza. Desarrollado con ❤️ para tu emprendimiento.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
